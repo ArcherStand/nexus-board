@@ -1,5 +1,5 @@
 // frontend/src/components/BoardView.tsx
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import useWebSocket from 'react-use-websocket';
 
 interface MessagePayload {
@@ -17,7 +17,7 @@ export const BoardView = () => {
     const { sendMessage, lastMessage } = useWebSocket(socketUrl, {
         onOpen: () => console.log('WebSocket connection opened.'),
         onClose: () => console.log('WebSocket connection closed.'),
-        shouldReconnect: (closeEvent) => true,
+        shouldReconnect: (_) => true,
     });
 
     useEffect(() => {
