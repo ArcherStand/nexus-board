@@ -1,6 +1,7 @@
 // frontend/src/App.tsx
 import { Login } from './components/Login';
-import './App.css';
+import { BoardView } from './components/BoardView'; // <-- 1. IMPORT
+import './App.css'; 
 
 function App() {
   const token = localStorage.getItem('authToken');
@@ -21,7 +22,7 @@ function App() {
         <button onClick={handleLogout}>Logout</button>
       </header>
       <main>
-        <p>Your collaborative board will be displayed here.</p>
+        <BoardView /> {/* <-- 2. RENDER THE COMPONENT HERE */}
       </main>
     </div>
   );

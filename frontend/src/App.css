@@ -55,3 +55,37 @@ header {
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
+
+.board-container {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    height: 60vh; /* Make it take up 60% of the viewport height */
+}
+
+.message-history {
+    flex-grow: 1;
+    overflow-y: auto; /* Add a scrollbar if messages overflow */
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.message {
+    margin-bottom: 8px;
+}
+
+.message strong {
+    margin-right: 5px;
+}
+
+.message-input {
+    display: flex;
+    padding: 10px;
+}
+
+.message-input input {
+    flex-grow: 1;
+    margin: 0;
+    margin-right: 10px;
+}
